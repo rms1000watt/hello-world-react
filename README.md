@@ -17,7 +17,7 @@ React-Redux is left out intentionally--not all projects need it.
 ## Install
 
 ```
-git clone ...
+git clone https://github.com/rms1000watt/hello-world-react.git
 cd hello-world-react
 npm install
 npm start
@@ -52,7 +52,7 @@ Visit [http://localhost:8000/](http://localhost:8000/)
 
 Class names should be unique. I know `css-loader` and other things can add hashing to the class names for HMR, etc. However, my `npm run build` removes that abstraction. So, unique class names are required. (Should probably add it back.) Might start with [TJ's boilerplate](https://github.com/tj/frontend-boilerplate) though.
 
-For dev, you have to edit `server.js` and `app.js` when adding routes.
+For dev, you have to edit `server.js` and `main.js` when adding routes.
 
 I use Nginx to serve the static files. See notes below for React-Router.
 
