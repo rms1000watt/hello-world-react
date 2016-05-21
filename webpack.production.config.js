@@ -48,7 +48,14 @@ module.exports = {
       }
     }, 
     {test: /\.json?$/, loader: 'json'}, 
-    {test: /\.(less|css)?$/, loader: ExtractTextPlugin.extract('style', 'css!postcss!less')}
+    {
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract('style', 'css?modules&localIdentName=[name]---[local]---[hash:base64:5]!postcss')
+    },
+    {
+      test: /\.less$/,
+      loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
+    }
     ]
   },
   postcss: [

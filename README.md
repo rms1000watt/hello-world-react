@@ -43,20 +43,14 @@ Visit [http://localhost:8000/](http://localhost:8000/)
 
 ## Todo
 
-- [ ] Fix package import versions
 - [ ] Clean up package imports
-- [ ] Add hashing back (See notes)
 
 
 ## Notes
 
-Class names should be unique. I know `css-loader` and other things can add hashing to the class names for HMR, etc. However, my `npm run build` removes that abstraction. So, unique class names are required. (Should probably add it back.) Might start with [TJ's boilerplate](https://github.com/tj/frontend-boilerplate) though.
-
 For dev, you have to edit `server.js` and `main.js` when adding routes.
 
 I use Nginx to serve the static files. See notes below for React-Router.
-
-Javascript can feel like a [black triangle](http://rampantgames.com/blog/?p=7745) sometimes.
 
 
 ## Nginx
@@ -75,6 +69,7 @@ server {
        ..
 }
 ```
+
 
 ## Credit
 
